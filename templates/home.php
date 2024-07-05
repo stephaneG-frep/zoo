@@ -4,26 +4,14 @@
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
             <div class="col">
                 <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                    style="background-image: url('unsplash-photo-1.jpg');">
+                    style="background-image: url('uploads/books/elephant.jpg');">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Pour voir toutes les photos de nos amis</h2>
                         <ul class="d-flex list-unstyled mt-auto">
                             <li class="me-auto">
-                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
-                                    class="rounded-circle border border-white">
+                            <a href="animaux.php" class="btn btn-primary">Voir les animaux</a>
                             </li>
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#geo-fill"></use>
-                                </svg>
-                                <small>Earth</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#calendar3"></use>
-                                </svg>
-                                <small>3d</small>
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -31,27 +19,15 @@
 
             <div class="col">
                 <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                    style="background-image: url('unsplash-photo-2.jpg');">
+                    style="background-image: url('uploads/books/maison.jpg');">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines
                         </h2>
                         <ul class="d-flex list-unstyled mt-auto">
                             <li class="me-auto">
-                                <img src="./../uploads/books/2-histoires-courtes.jpg" alt="Bootstrap" width="32" height="32"
-                                    class="rounded-circle border border-white">
+                                <a href="hotel.php" class="btn btn-primary">Se loger</a>
                             </li>
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#geo-fill"></use>
-                                </svg>
-                                <small>Pakistan</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#calendar3"></use>
-                                </svg>
-                                <small>4d</small>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -59,26 +35,14 @@
 
             <div class="col">
                 <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                    style="background-image: url('unsplash-photo-3.jpg');">
+                    style="background-image: url('uploads/books/table.jpg');">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h2>
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Quelques petits endrois pour manger </h2>
                         <ul class="d-flex list-unstyled mt-auto">
                             <li class="me-auto">
-                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32"
-                                    class="rounded-circle border border-white">
+                            <a href="animaux.php" class="btn btn-primary">La restauration</a>
                             </li>
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#geo-fill"></use>
-                                </svg>
-                                <small>California</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#calendar3"></use>
-                                </svg>
-                                <small>5d</small>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
