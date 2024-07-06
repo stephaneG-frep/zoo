@@ -1,9 +1,10 @@
 <?php
    require_once __DIR__. "/templates/header.php";
+   require_once __DIR__. "/templates/body_a_propos.php";
 ?>
 
-<div class="container">
-    <h1>A=propos</h1>
+<div class="container  px-4 py-5">
+    <h1>A-propos de nous et de notre zoo</h1>
 </div>
 
 

@@ -24,7 +24,7 @@
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="index.php" class="nav-link px-2 link-secondary">Home</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
+            <li><a href="animaux.php" class="nav-link px-2 link-dark">Les animaux</a></li>
             <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
             <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
             <li><a href="a_propos.php" class="nav-link px-2 link-dark">A-propos</a></li>
@@ -39,6 +39,6 @@
 
 <!-- <body style="background:#125C13;"> -->
 <!-- <body style="background:#1D5B79;"> -->
-<body style="background-image: url('uploads/books/cascade.jpeg');"> 
+<!-- <body style="background-image: url('uploads/books/cascade.jpeg');"> -->
 
     <main>
