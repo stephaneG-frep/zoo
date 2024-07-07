@@ -1,5 +1,5 @@
 <?php
-// charge le bon controlleur
+// charge le bon controlleur 
 namespace App\Controller;
 
 Class Controller
@@ -24,5 +24,29 @@ Class Controller
         } else {
             // charger la page d'accueil
         }
+    }
+    
+    // fonction de redue des pages
+    protected function render(string $path, array $params = []):void
+    {
+
+        $filePath = _ROOTPAPH_.'/templates/'.$path.'.php';
+
+        // gestion d'erreurs
+        try {
+            if (!file_exists($filePath)) {
+               throw new \Exception("Fichier non trouvé : ".$filePath);
+               
+            } else {
+                require_once $filePath;
+                //require_once _ROOTPAPH_."/templates/page/a_propos.php";
+            }
+
+        } catch(\Exception $e) {
+            echo $e->getMessage();
+        }
+
+        
+       
     }
 }
