@@ -1,3 +1,8 @@
+<?php 
+   require_once _ROOTPAPH_. "/templates/header.php";
+   require_once _ROOTPAPH_. "/templates/body_home.php";
+?>
+
 <div class="container px-4 py-5" id="custom-cards">
         <h2 class="pb-2 border-bottom">Bienvenu au ZOO de ...</h2>
 
@@ -49,3 +54,4 @@
             </div>
         </div>
     </div>
+<?php require_once _ROOTPAPH_."/templates/footer.php"; ?>

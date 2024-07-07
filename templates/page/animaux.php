@@ -1,6 +1,6 @@
 <?php 
-   require_once __DIR__. "/templates/header.php";
-   require_once __DIR__. "/templates/body_home.php";
+   require_once _ROOTPAPH_. "/templates/header.php";
+   require_once _ROOTPAPH_. "/templates/body_home.php";
 ?>
 <div class="container px-4 py-5">
 
@@ -15,13 +15,16 @@
                 <div class="card-body" style="background: #799351;">
                     <h3 class="card-title" style="color: #EAECCC ;"> Les perroquets</h3>
                     <hr>
-                    <p class="card-text" style="color: #EAECCC ;">Les psittaciformes, un terme compliqué qui désigne en fait la famille d’oiseaux tropicaux à laquelle appartiennent les perroquets. Les psittaciformes sont souvent connus sous le nom d’amazone, perruche, inséparable, loris ou conure, mais il existe aussi d’autres espèces moins répandues et tout aussi fascinantes. 
-
- 
-
-Les psittaciformes vivent dans la plupart des pays chauds de l’hémisphère sud. L’Australie, l’Amérique centrale et l’Amérique du Sud sont les régions du monde qui comptent le plus de perroquets. 
-
-A la fois intelligents et facétieux, les perroquets sont très appréciés : depuis plusieurs siècles, ils sont élevés comme animaux domestiques un peu partout dans le monde. </p>
+                    <p class="card-text" style="color: #EAECCC ;">Les psittaciformes, un terme compliqué qui désigne en fait la 
+                        famille d’oiseaux tropicaux à laquelle appartiennent les perroquets. Les psittaciformes sont souvent 
+                        connus sous le nom d’amazone, perruche, inséparable, loris ou conure, mais il existe aussi d’autres espèces moins 
+                        répandues et tout aussi fascinantes. 
+                        Les psittaciformes vivent dans la plupart des pays chauds de l’hémisphère sud.
+                        L’Australie, l’Amérique centrale et l’Amérique du Sud sont les régions du monde qui
+                         comptent le plus de perroquets. 
+                         A la fois intelligents et facétieux, les perroquets sont très appréciés
+                          : depuis plusieurs siècles, ils sont élevés comme animaux domestiques
+                           un peu partout dans le monde. </p>
                     <a href="#" class="btn btn-primary">Voir</a>
                 </div>
             </div>
@@ -76,5 +79,5 @@ A la fois intelligents et facétieux, les perroquets sont très appréciés : de
 
 
 <?php
-    require_once __DIR__. "/templates/footer.php";
+    require_once _ROOTPAPH_. "/templates/footer.php";
 ?>

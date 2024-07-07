@@ -6,24 +6,33 @@ Class Controller
 {
     public function route(): void
     {
-        if (isset($_GET['controller'])) {
-            switch ($_GET['controller']) {
-                case 'page':
-                    //charger le controller (enfant)
-                    $pageController = new PageController();
-                    $pageController->route();
-                    break;
-                case 'animaux':
-                    // controller animal
-                    var_dump("on charge la page AnimauxController");
-                    break;
-                default: 
-                    // erreur
-                    break;   
+        try {
+            if (isset($_GET['controller'])) {
+                switch ($_GET['controller']) {
+                    case 'page':
+                        //charger le controller (enfant)
+                        $pageController = new PageController();
+                        $pageController->route();
+                        break;
+                    case 'animaux':
+                        // controller animal
+                        var_dump("on charge la page AnimauxController");
+                        break;
+                    default: 
+                        throw new \Exception("Controlleur introuvable !");                       
+                        break;   
+                }
+            } else {
+                // charger la page d'accueil
+                $pageController = new PageController();
+                $pageController->home();
             }
-        } else {
-            // charger la page d'accueil
+        } catch (\Exception $e) {
+            $this->render('errors/default', [
+                'error' => $e->getMessage(),
+            ]);
         }
+        
     }
     
     // fonction de redue des pages
@@ -38,12 +47,15 @@ Class Controller
                throw new \Exception("Fichier non trouvé : ".$filePath);
                
             } else {
+                extract($params);
                 require_once $filePath;
                 //require_once _ROOTPAPH_."/templates/page/a_propos.php";
             }
 
         } catch(\Exception $e) {
-            echo $e->getMessage();
+            $this->render('errors/default', [
+                'error' => $e->getMessage(),
+            ]);
         }
 
         
