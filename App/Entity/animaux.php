@@ -7,6 +7,7 @@ class Animaux
    protected ?int $id = null;
    protected ?int $category_id = null;
    protected ?int $soignant_id = null;
+   protected string $race;
    protected string $name;
    protected int $age;
    protected string $description;
@@ -119,4 +120,28 @@ class Animaux
 
       return $this;
    }
+
+   /**
+    * Get the value of race
+    */
+   public function getRace(): string
+   {
+      return $this->race;
+   }
+
+   /**
+    * Set the value of race
+    */
+   public function setRace(string $race): self
+   {
+      $this->race = $race;
+
+      return $this;
+   }
+
+   
+
+   
+
+   
 }

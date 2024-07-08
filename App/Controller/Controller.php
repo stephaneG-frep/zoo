@@ -10,13 +10,14 @@ Class Controller
             if (isset($_GET['controller'])) {
                 switch ($_GET['controller']) {
                     case 'page':
-                        //charger le controller (enfant)
+                        //charger le controleur (enfant)
                         $pageController = new PageController();
                         $pageController->route();
                         break;
                     case 'animaux':
-                        // controller animal
-                        var_dump("on charge la page AnimauxController");
+                        // controleur animal
+                        $pageController = new AnimauxController();
+                        $pageController->route();
                         break;
                     default: 
                         throw new \Exception("Controlleur introuvable !");                       
