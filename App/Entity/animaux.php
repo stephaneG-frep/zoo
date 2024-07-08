@@ -6,11 +6,12 @@ class Animaux
 {
    protected ?int $id = null;
    protected ?int $category_id = null;
-   protected ?int $soignant_id = null;
-   protected string $race;
-   protected string $name;
-   protected int $age;
-   protected string $description;
+   protected ?int $employers_id = null;
+   protected string $race = '';
+   protected string $name = '';
+   protected int $age = 0;
+   protected string $description = '';
+   protected string $image = '';
 
 
    /**
@@ -50,19 +51,19 @@ class Animaux
    }
 
    /**
-    * Get the value of soignant_id
+    * Get the value of employers_id
     */
-   public function getSoignantId(): ?int
+   public function getEmployersId(): ?int
    {
-      return $this->soignant_id;
+      return $this->employers_id;
    }
 
    /**
-    * Set the value of soignant_id
+    * Set the value of employers_id
     */
-   public function setSoignantId(?int $soignant_id): self
+   public function setEmployersId(?int $employers_id): self
    {
-      $this->soignant_id = $soignant_id;
+      $this->employers_id = $employers_id;
 
       return $this;
    }
@@ -139,9 +140,21 @@ class Animaux
       return $this;
    }
 
-   
+   /**
+    * Get the value of image
+    */
+   public function getImage(): string
+   {
+      return $this->image;
+   }
 
-   
+   /**
+    * Set the value of image
+    */
+   public function setImage(string $image): self
+   {
+      $this->image = $image;
 
-   
+      return $this;
+   }
 }

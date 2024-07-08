@@ -24,10 +24,10 @@
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="index.php" class="nav-link px-2 link-secondary">Home</a></li>
-            <li><a href="animaux.php" class="nav-link px-2 link-dark">Les animaux</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
+            <li><a href="/zoo/index.php?controller=page&action=animaux" class="nav-link px-2 link-dark">Les animaux</a></li>
+            <li><a href="/zoo/index.php?controller=page&action=soigneur" class="nav-link px-2 link-dark">Le personnel</a></li>
             <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-            <li><a href="a_propos.php" class="nav-link px-2 link-dark">A-propos</a></li>
+            <li><a href="/zoo/index.php?controller=page&action=a_propos" class="nav-link px-2 link-dark">A-propos</a></li>
         </ul>
 
         <div class="col-md-3 text-end">

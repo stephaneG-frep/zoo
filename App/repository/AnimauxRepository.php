@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Animaux;
 use App\Db\Mysql;
+use App\Tools\StringTools;
 
 class AnimauxRepository
 {
@@ -12,17 +13,18 @@ class AnimauxRepository
         //Appel BDD un animal
 
         $mysql = Mysql::getInstance();
-        
         $pdo = $mysql->getPDO();
 
-        $animal = ['id' => 1, 'race' => 'Lion', 'name' => 'Léon', 'age' => '33', 'description' => 'description test'];
+        $query = $pdo->prepare("SELECT * FROM animaux WHERE id = :id");
+        $query->bindParam(':id', $id, $pdo::PARAM_INT);
+        $query->execute();
+        $animal = $query->fetch($pdo::FETCH_ASSOC);
 
         $animauxEntity = new Animaux();
-        $animauxEntity->setId($animal['id']);
-        $animauxEntity->setRace($animal['race']);
-        $animauxEntity->setName($animal['name']);
-        $animauxEntity->setAge($animal['age']);
-        $animauxEntity->setDescription($animal['description']);
+
+        foreach ($animal as $key => $value) {
+            $animauxEntity->{'set'.StringTools::toPascalCase($key)  }($value);
+        }
 
         return $animauxEntity;
     }

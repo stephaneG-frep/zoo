@@ -25,7 +25,7 @@
                          A la fois intelligents et facétieux, les perroquets sont très appréciés
                           : depuis plusieurs siècles, ils sont élevés comme animaux domestiques
                            un peu partout dans le monde. </p>
-                    <a href="#" class="btn btn-primary">Voir</a>
+                    <a href="/zoo/index.php?controller=animaux&action=show&id=<?=$_GET['id'];?>" class="btn btn-primary">Voir</a>
                 </div>
             </div>
         </div>

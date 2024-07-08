@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^a_propos/$ /zoo/index.php?controller=page&action=a_propos
