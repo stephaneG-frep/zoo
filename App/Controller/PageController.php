@@ -20,7 +20,7 @@ class PageController extends Controller
                         break;
                     case 'animaux':
                         // appeler la méthode animaux
-                        $this->animaux();
+                        //$this->animaux();
                         break;
                     case 'soigneur':
                         // appeler la méthode soignant
@@ -67,6 +67,7 @@ class PageController extends Controller
         $this->render('page/home', $params);
     }
 
+    /*
     protected function animaux()
     {
         $params = [
@@ -74,6 +75,7 @@ class PageController extends Controller
         ];
         $this->render('page/animaux', $params);
     }
+    */
 
     protected function soigneur()
     {

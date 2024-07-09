@@ -15,7 +15,7 @@
         </div>
 
         <div class="col-md-12 px-5 py-5 text-center" style="background-color: blanchedalmond;">
-           <img src="/uploads/books/<?=$animal->getImage(); ?>" alt="" width="600" height="500">
+           <img src="<?=$animal->getImage(); ?>" alt="" width="600" height="500">
         </div>
     </div>
 

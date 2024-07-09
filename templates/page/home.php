@@ -1,6 +1,9 @@
 <?php 
    require_once _ROOTPAPH_. "/templates/header.php";
    require_once _ROOTPAPH_. "/templates/body_home.php";
+
+
+   
 ?>
 
 <div class="container px-4 py-5" id="custom-cards">
@@ -14,7 +17,7 @@
                         <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Pour voir toutes les photos de nos amis</h2>
                         <ul class="d-flex list-unstyled mt-auto">
                             <li class="me-auto">
-                            <a href="animaux.php" class="btn btn-primary">Voir les animaux</a>
+                            <a href="/zoo/index.php?controller=animaux&action=list&<?=$animaux['animaux'] ?> " class="btn btn-primary">Voir les animaux</a>
                             </li>
                            
                         </ul>

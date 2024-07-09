@@ -28,4 +28,30 @@ class AnimauxRepository
 
         return $animauxEntity;
     }
+
+    public function getTotalAnimaux()
+    {
+        //(int $category_id, int $employers_id, int $image_id, string $race, string $name, string $age, string $description, string $image)
+    
+
+
+        $mysql = Mysql::getInstance();
+        $pdo = $mysql->getPDO();
+
+        $query = $pdo->prepare("SELECT * FROM animaux ORDER BY id DESC");
+        
+        $query->execute();
+        $animaux = $query->fetchAll();
+
+        $animauxEntity = new Animaux();
+
+        /*
+        foreach ($animaux as $key => $value) {
+            $animauxEntity->{'set'.StringTools::toPascalCase($key)  }($value);
+        }
+        */
+        return $animauxEntity;
+
+    
+    }
 }

@@ -18,7 +18,7 @@ class AnimauxController extends Controller
                         break;
                     case 'list':
                         // afficher tous les animaux
-                        //$this->list();
+                        $this->list();
                         break;
                     case 'edit':
                         // appeler la méthode edit
@@ -70,6 +70,24 @@ class AnimauxController extends Controller
             ]);
         }
         
+    }
+
+    protected function list()
+    {
+            if (isset($_GET['animaux'])) {
+                $animaux = (string)$_GET['animaux'];
+                // charger l'animal par l'appel au repository
+                $animauxRepository = new AnimauxRepository();
+                $animaux = $animauxRepository->getTotalAnimaux();
+
+
+                $this->render('animaux/list', [
+                    'animaux' => $animaux,
+                    
+                ]);
+            }
+        
+
     }
         
     

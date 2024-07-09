@@ -7,6 +7,7 @@ class Animaux
    protected ?int $id = null;
    protected ?int $category_id = null;
    protected ?int $employers_id = null;
+   protected ?int $image_id = null;
    protected string $race = '';
    protected string $name = '';
    protected int $age = 0;
@@ -154,6 +155,26 @@ class Animaux
    public function setImage(string $image): self
    {
       $this->image = $image;
+
+      return $this;
+   }
+
+   
+
+   /**
+    * Get the value of image_id
+    */
+   public function getImageId(): ?int
+   {
+      return $this->image_id;
+   }
+
+   /**
+    * Set the value of image_id
+    */
+   public function setImageId(?int $image_id): self
+   {
+      $this->image_id = $image_id;
 
       return $this;
    }
