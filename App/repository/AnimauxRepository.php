@@ -4,9 +4,10 @@ namespace App\Repository;
 
 use App\Entity\Animaux;
 use App\Db\Mysql;
+use App\Entity\Entity;
 use App\Tools\StringTools;
 
-class AnimauxRepository
+class AnimauxRepository extends Entity
 {
     public function findOneById(int $id)
     {
@@ -29,7 +30,7 @@ class AnimauxRepository
         return $animauxEntity;
     }
 
-    public function getTotalAnimaux()
+    public function getTotalAnimaux(array $animaux)
     {
         //(int $category_id, int $employers_id, int $image_id, string $race, string $name, string $age, string $description, string $image)
     
@@ -41,17 +42,40 @@ class AnimauxRepository
         $query = $pdo->prepare("SELECT * FROM animaux ORDER BY id DESC");
         
         $query->execute();
-        $animaux = $query->fetchAll();
+        $query->fetchAll();
+        
 
         $animauxEntity = new Animaux();
 
-        /*
         foreach ($animaux as $key => $value) {
             $animauxEntity->{'set'.StringTools::toPascalCase($key)  }($value);
         }
-        */
+
+    
+        
         return $animauxEntity;
 
     
+    }
+
+    public function findAll(): array
+    {
+
+        $mysql = Mysql::getInstance();
+        $pdo = $mysql->getPDO();
+
+
+        $query = $this->$pdo->prepare("SELECT * FROM animaux");
+        $query->execute();
+        $animaux = $query->fetchAll($this->$pdo::FETCH_ASSOC);
+
+        $animauxArray = [];
+
+        if ($animaux) {
+            foreach ($animaux as $animal) {
+                $animauxArray[] = Animaux::createAndHydrate($animal);
+            }
+        }
+        return $animauxArray;
     }
 }

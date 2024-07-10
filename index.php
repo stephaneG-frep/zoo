@@ -1,6 +1,6 @@
 
 <?php
-  
+   require_once __DIR__. "/config.php";
    // constante du chemin racine
    define("_ROOTPAPH_", __DIR__);
 

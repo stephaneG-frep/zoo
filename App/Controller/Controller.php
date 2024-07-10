@@ -19,6 +19,11 @@ Class Controller
                         $pageController = new AnimauxController();
                         $pageController->route();
                         break;
+                /*    case 'employer':
+                        // controleur employer
+                        $pageController = new EmployerController();
+                        $pageController->route();
+                        break; */
                     default: 
                         throw new \Exception("Controlleur introuvable !");                       
                         break;   
@@ -48,6 +53,7 @@ Class Controller
                throw new \Exception("Fichier non trouvé : ".$filePath);
                
             } else {
+                // Extrait chaque ligne du tableau ($params) en variable
                 extract($params);
                 require_once $filePath;
                 //require_once _ROOTPAPH_."/templates/page/a_propos.php";

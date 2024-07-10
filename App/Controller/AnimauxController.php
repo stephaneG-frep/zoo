@@ -72,22 +72,25 @@ class AnimauxController extends Controller
         
     }
 
+    
     protected function list()
     {
-            if (isset($_GET['animaux'])) {
-                $animaux = (string)$_GET['animaux'];
-                // charger l'animal par l'appel au repository
-                $animauxRepository = new AnimauxRepository();
-                $animaux = $animauxRepository->getTotalAnimaux();
+        try {
+            // Récupérer tous les films
+            $animauxRepository = new AnimauxRepository();
+            $animaux = $animauxRepository->findAll();
+
+            $this->render('animaux/list', [
+                'animaux' => $animaux,
+            ]);
 
 
-                $this->render('animaux/list', [
-                    'animaux' => $animaux,
-                    
-                ]);
-            }
-        
 
+        } catch (\Exception $e) {
+            $this->render('errors/default', [
+                'error' => $e->getMessage()
+            ]);
+        } 
     }
         
     
