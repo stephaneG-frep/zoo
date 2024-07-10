@@ -18,13 +18,13 @@ class PageController extends Controller
                         // appeler la méthode home
                         $this->home();
                         break;
-                    case 'animaux':
+                   /* case 'animaux':
                         // appeler la méthode animaux
                         //$this->animaux();
-                        break;
-                    case 'soigneur':
+                        break; */
+                    case 'employer':
                         // appeler la méthode soignant
-                        $this->soigneur();
+                        $this->employer();
                         break;
                     default: 
                         throw new \Exception("Cette action n'existe pas :".$_GET['action']);                       
@@ -77,11 +77,11 @@ class PageController extends Controller
     }
     */
 
-    protected function soigneur()
+    protected function employer()
     {
         $params = [
-          'titre' => 'Les soigeurs et les vétérinaires'
+          'titre' => 'Nous vous présentont tous nos employers'
         ];
-        $this->render('page/soigneur', $params);
+        $this->render('page/employer', $params);
     }
 }

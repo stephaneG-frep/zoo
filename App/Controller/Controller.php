@@ -19,7 +19,7 @@ Class Controller
                         $pageController = new AnimauxController();
                         $pageController->route();
                         break;
-                /*    case 'employer':
+                    /*case 'employer':
                         // controleur employer
                         $pageController = new EmployerController();
                         $pageController->route();

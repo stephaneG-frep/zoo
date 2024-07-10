@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-class Animaux
+class Animaux extends Entity
 {
    protected ?int $id = null;
    protected ?int $category_id = null;

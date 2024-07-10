@@ -1,15 +1,18 @@
 <?php 
    require_once _ROOTPAPH_. "/templates/header.php";
    //require_once _ROOTPAPH_. "/templates/body_home.php";
+      /* @var $animal \App\Entity\Animaux */ 
+
    
-   
+   var_dump($animaux);
     
 ?>
 <div class="container px-4 py-5">
 
     <div class="row text-center">
         <h1>Nos amis les animaux</h1>
-    
+    <?php foreach ($animaux as $animal) {?>
+       
         <div class="col-md-4 my-2 d-flex">         
             <div class="card">
                 <div class="card-header" style="background: #3A8891;">
@@ -17,7 +20,7 @@
                         class="card-img-bottom rounded rounded-4 ">
                 </div>
                 <div class="card-body" style="background: #799351;">
-                    <h2 class="card-title" style="color: #EAECCC ;"><?=$animaux['race']; ?></h2>
+                    <h2 class="card-title" style="color: #EAECCC ;"><?=$animal->getRace(); ?></h2>
                     <hr>
                     <h3 class="card-title" style="color: #EAECCC ;"><?=$animaux->getName() ?></h3>
                     <hr>
@@ -30,7 +33,7 @@
             </div>
            
         </div>
-
+    <?php }?>
      <!--   <div class="col-md-4 my-2 d-flex">
             <div class="card">
                 <div class="card-header" style="background: #3A8891;">

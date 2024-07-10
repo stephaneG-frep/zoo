@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Repository\AnimauxRepository;
 
+
 class AnimauxController extends Controller
 {
     public function route(): void
@@ -76,7 +77,7 @@ class AnimauxController extends Controller
     protected function list()
     {
         try {
-            // Récupérer tous les films
+            // Récupérer tous les animaux
             $animauxRepository = new AnimauxRepository();
             $animaux = $animauxRepository->findAll();
 

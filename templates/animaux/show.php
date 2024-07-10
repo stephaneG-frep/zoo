@@ -1,7 +1,7 @@
 <?php 
    require_once _ROOTPAPH_. "/templates/header.php";
    require_once _ROOTPAPH_. "/templates/body_pages.php";
-   /* @var $animal \App\Entity\Animaux */ 
+   /* @var  \App\Entity\Animaux $animal */ 
 ?>
 
 <div class="container  px-4 py-5">

@@ -4,10 +4,9 @@ namespace App\Repository;
 
 use App\Entity\Animaux;
 use App\Db\Mysql;
-use App\Entity\Entity;
 use App\Tools\StringTools;
 
-class AnimauxRepository extends Entity
+class AnimauxRepository 
 {
     public function findOneById(int $id)
     {
@@ -28,34 +27,6 @@ class AnimauxRepository extends Entity
         }
 
         return $animauxEntity;
-    }
-
-    public function getTotalAnimaux(array $animaux)
-    {
-        //(int $category_id, int $employers_id, int $image_id, string $race, string $name, string $age, string $description, string $image)
-    
-
-
-        $mysql = Mysql::getInstance();
-        $pdo = $mysql->getPDO();
-
-        $query = $pdo->prepare("SELECT * FROM animaux ORDER BY id DESC");
-        
-        $query->execute();
-        $query->fetchAll();
-        
-
-        $animauxEntity = new Animaux();
-
-        foreach ($animaux as $key => $value) {
-            $animauxEntity->{'set'.StringTools::toPascalCase($key)  }($value);
-        }
-
-    
-        
-        return $animauxEntity;
-
-    
     }
 
     public function findAll(): array
